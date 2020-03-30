@@ -48,5 +48,30 @@ implements CustomSpecialRate{
 		balance = balance + (balance*Hinterest/100)+
 				(balance*gradeRate/100) + money;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "계좌번호> "+accNum+"\n고객이름> "+name+"\n잔고> "+balance
+				+"\n기본이자%(정수형태로입력)> "+Hinterest+"%"
+				+"\n신용등급(A,B,C)등급> "+grade;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((accNum == null) ? 0 : accNum.hashCode());
+		//result = prime * result + balance;
+		//result = prime * result + ((name == null) ? 0 : name.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		Account account = (Account)obj;
+		if(account.accNum.equals(this.accNum)) {
+			return true;
+		}else return false;
+	}
+
 }

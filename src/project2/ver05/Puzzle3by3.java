@@ -96,11 +96,6 @@ public class Puzzle3by3 {
 		}
 	}
 
-	public void welcome() {
-		
-		
-	}
-
 	public void playGame() {
 		while(true) {
 			try {
@@ -165,7 +160,6 @@ public class Puzzle3by3 {
 		shuffle();
 
 		showPuzzle();
-
 
 		playGame();
 	}

@@ -5,7 +5,6 @@ import java.sql.SQLException;
 
 public class SelectSQLall extends ConnectDB {
 
-	//생성자메소드
 	public SelectSQLall() {}
 
 	@Override
@@ -34,7 +33,7 @@ public class SelectSQLall extends ConnectDB {
 			e.printStackTrace();
 		}
 		finally {
-			close(); //DB자원반납
+			close();
 		}
 	}
 }

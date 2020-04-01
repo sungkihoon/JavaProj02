@@ -3,7 +3,6 @@ package project2.ver05;
 import java.util.Scanner;
 
 public class Account {
-
 	public Account() {}
 	public Account(int size) {}
 
@@ -39,12 +38,10 @@ public class Account {
 				puzzleGame();
 			case MenuChoice.EXIT:
 				System.out.println("프로그램을 종료합니다.");
-				
 				return;
 			}
 		}
 	}
-
 	public void makeAccount(){
 		new InsertQuery().execute();
 	}

@@ -162,16 +162,19 @@ public class AccountManager {
 						System.out.print("선택> ");
 						int choice2 = scan.nextInt();
 						if(choice2==1) {
-							System.out.println(ac.balance+"원 출금하겠습니다.");
 							ac.balance = 0;
+							System.out.println("출금이 완료되었습니다.");
+							check = 1;
 						}else if (choice2==2) {
 							System.out.println("요청이 취소되었습니다.");
+							check = 1;
 							return;
 						}
+					}else {
+						ac.balance = ac.balance-withdrawMoney;
+						System.out.println("출금이 완료되었습니다.");
+						check = 1;
 					}
-					ac.balance -= withdrawMoney;
-					System.out.println("출금이 완료되었습니다.");
-					check = 1;
 				}
 			}
 			if (check == 0) {
@@ -257,17 +260,14 @@ public class AccountManager {
 					new ObjectInputStream(
 							new FileInputStream
 							("src/project2/ver04/BankingInfo.obj"));
-			Iterator<Account> itr = set.iterator();
 
 			while (true) {
 				Account account =(Account)in.readObject();
 				if(account==null)break;
 				set.add(account);
 			}
-
-			showAccInfo();
 		} catch (Exception e) {
-			//e.printStackTrace();
+
 		}
 	}
 }

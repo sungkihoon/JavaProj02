@@ -100,7 +100,6 @@ public class AccountManager {
 
 		for(int i=0 ; i<numofArray ; i++) {
 			if(searchNum.compareTo(accountInfo[i].accNum)==0) {
-
 				accountInfo[i].interestRate(depositMoney);
 			}
 		}

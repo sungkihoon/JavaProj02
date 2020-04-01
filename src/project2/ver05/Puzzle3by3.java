@@ -138,7 +138,9 @@ public class Puzzle3by3 {
 					x++;
 					break;
 				case 0:
-					return;
+					Account ac = new Account();
+					ac.printMenu();
+					break;
 				}
 
 				//선택 후 출력되는 퍼즐
